@@ -29,14 +29,17 @@ namespace AstcTest
 
 					string dirPath = Path.GetDirectoryName(path);
 					string name = Path.GetFileNameWithoutExtension(path);
-					string newPath = Path.Combine(dirPath, name + "_decoded.png");
+					string newPath = Path.Combine(dirPath, name + "_decoded.bmp");
+
+					// Flip image vertically
+					bitmap.Bitmap.RotateFlip(System.Drawing.RotateFlipType.RotateNoneFlipY);
+					
 					bitmap.Bitmap.Save(newPath, ImageFormat.Png);
 				}
 
 				Console.WriteLine("Finished");
 			}
 
-			Console.ReadKey();
 		}
 	}
 }
