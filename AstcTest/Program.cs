@@ -29,7 +29,7 @@ namespace AstcTest
 
 					string dirPath = Path.GetDirectoryName(path);
 					string name = Path.GetFileNameWithoutExtension(path);
-					string newPath = Path.Combine(dirPath, name + "_decoded.bmp");
+					string newPath = Path.Combine(dirPath, name + "_decoded.png");
 
 					// Flip image vertically
 					bitmap.Bitmap.RotateFlip(System.Drawing.RotateFlipType.RotateNoneFlipY);
